@@ -5,8 +5,9 @@
 <div>
   <%= link_to "Edit this bank branch", edit_bank_branch_path(@bank_branch) %> |
   <%= link_to "Back to bank branches", bank_branches_path %>
-
-  <%= button_to "Destroy this bank branch", @bank_branch, method: :delete %>
+<p>
+  <button class="button is-danger"><%= link_to "Destroy this bank branch", @bank_branch, method: :delete %></button>
+</p>
 </div>
 
 <%# ------------------------------CHANGES------------------------- %>

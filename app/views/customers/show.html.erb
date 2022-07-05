@@ -8,3 +8,18 @@
 
   <%= button_to "Destroy this customer", @customer, method: :delete %>
 </div>
+
+<section class="section accounts">
+ <div class="container">
+   <h2 class="subtitle is-5">
+     <strong><%= @customer.accounts.count %></strong> Accounts
+   </h2>
+   <%= render @customer.accounts %>
+   <div class="account-form">
+     <hr />
+     <h3 class="subtitle is-3">Create An Account</h3>
+     <%= render partial: 'accounts/form', locals: { account: @customer.accounts.build } %>
+   </div>
+ </div>
+</section>
+

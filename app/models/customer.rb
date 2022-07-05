@@ -9,4 +9,12 @@ class Customer
   field :aadhaar_number, type: String
   field :permanent_address, type: String
   belongs_to :bank_branch
+
+  validates :first_name, presence: true, length: { minimum: 3 }
+  validates :mobile_number, presence: true, length: { minimum: 10 }
+  validates :pan_id, presence: true, length: { minimum: 10 }
+  validates :aadhaar_number, :permanent_address, presence: true
+
+  has_many :accounts, dependent: :destroy
+  has_many :bank_branches
 end

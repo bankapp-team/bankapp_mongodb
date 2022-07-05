@@ -1,0 +1,41 @@
+<div id="<%= dom_id account %>">
+  <p>
+   <strong>Bank Name</strong>
+   <%= account.customer.bank_branch.bankname %>
+ </p>
+ 
+ <p>
+   <strong>IFSC Code:</strong>
+   <%= account.customer.bank_branch.ifsc %>
+ </p>
+ 
+ <p>
+   <strong>First Name:</strong>
+   <%= account.customer.first_name %>
+ </p>
+ 
+ <p>
+   <strong>Last Name:</strong>
+   <%= account.customer.last_name %>
+ </p>
+  <p>
+    <strong>Account no:</strong>
+    <%= account.account_no %>
+  </p>
+
+  <p>
+    <strong>Balance:</strong>
+    <%= account.balance %>
+  </p>
+
+  <p>
+    <strong>Account type:</strong>
+    <%= account.account_type %>
+  </p>
+
+  <%# <p>
+    <strong>Customer:</strong>
+    <%= account.customer_id %>
+  <%# </p>  %>
+
+</div>

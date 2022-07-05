@@ -11,49 +11,50 @@
     </div>
   <% end %>
 
-  <div>
+  <div class="field">
     <%= form.label :first_name, style: "display: block" %>
     <%= form.text_field :first_name %>
   </div>
 
-  <div>
+  <div class="field">
     <%= form.label :last_name, style: "display: block" %>
     <%= form.text_field :last_name %>
   </div>
 
-  <div>
+  <div class="field">
     <%= form.label :mobile_number, style: "display: block" %>
     <%= form.text_field :mobile_number %>
   </div>
 
-  <div>
+  <div class="field">
     <%= form.label :email_address, style: "display: block" %>
     <%= form.text_field :email_address %>
   </div>
 
-  <div>
+  <div class="field">
     <%= form.label :pan_id, style: "display: block" %>
     <%= form.text_field :pan_id %>
   </div>
 
-  <div>
+  <div class="field">
     <%= form.label :aadhaar_number, style: "display: block" %>
     <%= form.text_field :aadhaar_number %>
   </div>
 
-  <div>
+  <div class="field">
     <%= form.label :permanent_address, style: "display: block" %>
     <%= form.text_area :permanent_address %>
   </div>
 
 
 <%# --------------------------------CHANGES------------------------- %>
-  <div>
+  <div class="field">
     <%# <%= form.label :bank_branch_id, style: "display: block" %> 
     <%= form.hidden_field :bank_branch_id %>
   </div>
 
-  <div>
+  <%# <button class="button is-primary"> %>
     <%= form.submit %>
-  </div>
+  <%# </button> %>
 <% end %>
+
