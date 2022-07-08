@@ -1,50 +1,54 @@
 <div id="<%= dom_id customer %>">
   <p>
-    <strong>First name:</strong>
-    <%= customer.first_name %>
+    <strong>Customerid:</strong>
+    <%= customer.customerid %>
   </p>
 
   <p>
-    <strong>Last name:</strong>
-    <%= customer.last_name %>
+    <strong>Fname:</strong>
+    <%= customer.fname %>
   </p>
 
   <p>
-    <strong>Mobile number:</strong>
-    <%= customer.mobile_number %>
+    <strong>Ifsc:</strong>
+    <%= customer.ifsc %>
   </p>
 
   <p>
-    <strong>Email address:</strong>
-    <%= customer.email_address %>
+    <strong>Lname:</strong>
+    <%= customer.lname %>
   </p>
 
   <p>
-    <strong>Pan:</strong>
-    <%= customer.pan_id %>
+    <strong>Mobile:</strong>
+    <%= customer.mobile %>
   </p>
 
   <p>
-    <strong>Aadhaar number:</strong>
-    <%= customer.aadhaar_number %>
+    <strong>Pancard:</strong>
+    <%= customer.pancard %>
   </p>
 
   <p>
-    <strong>Permanent address:</strong>
-    <%= customer.permanent_address %>
+    <strong>Email:</strong>
+    <%= customer.email %>
   </p>
 
-<%# ---------------------CHANGES------------------ %>
-  <%# <p>
-    <strong>Bank branch:</strong>
-    <%= customer.bank_branch_id %>
-  <%# </p>  %>
+  <p>
+    <strong>District:</strong>
+    <%= customer.district %>
+  </p>
 
   <p>
-  <%= link_to 'Delete', [customer],
-  method: :delete,
-  class: "button is-danger",
-  data: { confirm: 'Are you sure?' } %>
-</p>
+    <strong>State:</strong>
+    <%= customer.state %>
+  </p>
+
+  <p>
+    <strong>Country:</strong>
+    <%= customer.country %>
+  </p>
+
+  <%= link_to "Show this customer", "/customers/#{customer.customerid}" %>
 
 </div>

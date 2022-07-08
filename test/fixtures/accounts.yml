@@ -1,13 +1,15 @@
 # Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  account_no: MyString
-  balance: 1
-  account_type: MyString
-  customer: one
+  accountnum: 1
+  customerid: 1
+  accounttype: MyString
+  balance: 9.99
+  ifsc: MyString
 
 two:
-  account_no: MyString
-  balance: 1
-  account_type: MyString
-  customer: two
+  accountnum: 1
+  customerid: 1
+  accounttype: MyString
+  balance: 9.99
+  ifsc: MyString

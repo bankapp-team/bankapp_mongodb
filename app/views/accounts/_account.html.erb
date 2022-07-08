@@ -1,26 +1,17 @@
 <div id="<%= dom_id account %>">
   <p>
-   <strong>Bank Name</strong>
-   <%= account.customer.bank_branch.bankname %>
- </p>
- 
- <p>
-   <strong>IFSC Code:</strong>
-   <%= account.customer.bank_branch.ifsc %>
- </p>
- 
- <p>
-   <strong>First Name:</strong>
-   <%= account.customer.first_name %>
- </p>
- 
- <p>
-   <strong>Last Name:</strong>
-   <%= account.customer.last_name %>
- </p>
+    <strong>Accountnum:</strong>
+    <%= account.accountnum %>
+  </p>
+
   <p>
-    <strong>Account no:</strong>
-    <%= account.account_no %>
+    <strong>Customerid:</strong>
+    <%= account.customerid %>
+  </p>
+
+  <p>
+    <strong>Accounttype:</strong>
+    <%= account.accounttype %>
   </p>
 
   <p>
@@ -29,13 +20,10 @@
   </p>
 
   <p>
-    <strong>Account type:</strong>
-    <%= account.account_type %>
+    <strong>Ifsc:</strong>
+    <%= account.ifsc %>
   </p>
 
-  <%# <p>
-    <strong>Customer:</strong>
-    <%= account.customer_id %>
-  <%# </p>  %>
+    <%= link_to "Show this account", "/accounts/#{account.accountnum}" %>
 
 </div>

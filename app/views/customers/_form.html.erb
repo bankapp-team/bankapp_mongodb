@@ -11,50 +11,57 @@
     </div>
   <% end %>
 
-  <div class="field">
-    <%= form.label :first_name, style: "display: block" %>
-    <%= form.text_field :first_name %>
+  <div>
+    <%= form.label :customerid, style: "display: block" %>
+    <%= form.number_field :customerid %>
   </div>
 
-  <div class="field">
-    <%= form.label :last_name, style: "display: block" %>
-    <%= form.text_field :last_name %>
+  <div>
+    <%= form.label :fname, style: "display: block" %>
+    <%= form.text_field :fname %>
   </div>
 
-  <div class="field">
-    <%= form.label :mobile_number, style: "display: block" %>
-    <%= form.text_field :mobile_number %>
+  <div>
+    <%= form.label :ifsc, style: "display: block" %>
+    <%= form.text_field :ifsc %>
   </div>
 
-  <div class="field">
-    <%= form.label :email_address, style: "display: block" %>
-    <%= form.text_field :email_address %>
+  <div>
+    <%= form.label :lname, style: "display: block" %>
+    <%= form.text_field :lname %>
   </div>
 
-  <div class="field">
-    <%= form.label :pan_id, style: "display: block" %>
-    <%= form.text_field :pan_id %>
+  <div>
+    <%= form.label :mobile, style: "display: block" %>
+    <%= form.text_field :mobile %>
   </div>
 
-  <div class="field">
-    <%= form.label :aadhaar_number, style: "display: block" %>
-    <%= form.text_field :aadhaar_number %>
+  <div>
+    <%= form.label :pancard, style: "display: block" %>
+    <%= form.text_field :pancard %>
   </div>
 
-  <div class="field">
-    <%= form.label :permanent_address, style: "display: block" %>
-    <%= form.text_area :permanent_address %>
+  <div>
+    <%= form.label :email, style: "display: block" %>
+    <%= form.text_field :email %>
   </div>
 
-
-<%# --------------------------------CHANGES------------------------- %>
-  <div class="field">
-    <%# <%= form.label :bank_branch_id, style: "display: block" %> 
-    <%= form.hidden_field :bank_branch_id %>
+  <div>
+    <%= form.label :district, style: "display: block" %>
+    <%= form.text_field :district %>
   </div>
 
-  <%# <button class="button is-primary"> %>
+  <div>
+    <%= form.label :state, style: "display: block" %>
+    <%= form.text_field :state %>
+  </div>
+
+  <div>
+    <%= form.label :country, style: "display: block" %>
+    <%= form.text_field :country %>
+  </div>
+
+  <div>
     <%= form.submit %>
-  <%# </button> %>
+  </div>
 <% end %>
-

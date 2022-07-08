@@ -1,0 +1,26 @@
+<p style="color: green"><%= notice %></p>
+
+<%= render @bank %>
+
+<div>
+
+  <%= link_to "Edit this bank", edit_bank_path(@bank) %> |
+  <%= link_to "Back to banks", banks_path %>
+
+  <%= button_to "Destroy this bank", @bank, method: :delete %>
+</div>
+
+<section class="section Customers">
+  <div class="container">
+    <h2 class="subtitle is-5">
+      <strong><%= @bank.customers.count %></strong> Customers
+    </h2>
+    <br/>
+    <%= render @bank.customers %>
+    <div class="customers-form">
+      <hr />
+      <h3 class="subtitle is-3">New Customer </h3>
+      <%= render partial: 'customers/form', locals: { customer: @bank.customers.build } %>
+    </div>
+  </div>
+</section>

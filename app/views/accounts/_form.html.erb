@@ -12,23 +12,28 @@
   <% end %>
 
   <div>
-    <%= form.label :account_no, style: "display: block" %>
-    <%= form.text_field :account_no %>
+    <%= form.label :accountnum, style: "display: block" %>
+    <%= form.number_field :accountnum %>
+  </div>
+
+  <div>
+    <%= form.label :customerid, style: "display: block" %>
+    <%= form.number_field :customerid %>
+  </div>
+
+  <div>
+    <%= form.label :accounttype, style: "display: block" %>
+    <%= form.text_field :accounttype %>
   </div>
 
   <div>
     <%= form.label :balance, style: "display: block" %>
-    <%= form.number_field :balance %>
+    <%= form.text_field :balance %>
   </div>
 
   <div>
-    <%= form.label :account_type, style: "display: block" %>
-    <%= form.text_field :account_type %>
-  </div>
-
-  <div>
-    <%# <%= form.label :customer_id, style: "display: block" %> 
-    <%= form.hidden_field :customer_id %>
+    <%= form.label :ifsc, style: "display: block" %>
+    <%= form.text_field :ifsc %>
   </div>
 
   <div>

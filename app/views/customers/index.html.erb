@@ -1,14 +1,14 @@
 <p style="color: green"><%= notice %></p>
 
-<p class="title">Customers</p>
-      <div id="customers">
-        <% @customers.each do |customer| %>
-          <%= render customer %>
-          
-          <%# <div class="box"> %>
-          <button class="is-primary"><%= link_to "Show this customer", customer %></button>
-          <%# </div> %>
-        <% end %>
-      </div>
+<h1>Customers</h1>
+
+<div id="customers">
+  <% @customers.each do |customer| %>
+    <%= render customer %>
+    <p>
+      <%= link_to "Show this customer", customer %>
+    </p>
+  <% end %>
+</div>
 
 <%= link_to "New customer", new_customer_path %>

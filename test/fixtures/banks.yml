@@ -1,0 +1,19 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  bankname: MyString
+  branchname: MyString
+  ifsc: MyString
+  district: MyString
+  state: MyString
+  address: MyString
+  pincode: 1
+
+two:
+  bankname: MyString
+  branchname: MyString
+  ifsc: MyString
+  district: MyString
+  state: MyString
+  address: MyString
+  pincode: 1

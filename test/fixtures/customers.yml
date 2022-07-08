@@ -1,21 +1,25 @@
 # Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  first_name: MyString
-  last_name: MyString
-  mobile_number: MyString
-  email_address: MyString
-  pan_id: MyString
-  aadhaar_number: MyString
-  permanent_address: MyText
-  bank_branch: one
+  customerid: 1
+  fname: MyString
+  ifsc: MyString
+  lname: MyString
+  mobile: MyString
+  pancard: MyString
+  email: MyString
+  district: MyString
+  state: MyString
+  country: MyString
 
 two:
-  first_name: MyString
-  last_name: MyString
-  mobile_number: MyString
-  email_address: MyString
-  pan_id: MyString
-  aadhaar_number: MyString
-  permanent_address: MyText
-  bank_branch: two
+  customerid: 1
+  fname: MyString
+  ifsc: MyString
+  lname: MyString
+  mobile: MyString
+  pancard: MyString
+  email: MyString
+  district: MyString
+  state: MyString
+  country: MyString

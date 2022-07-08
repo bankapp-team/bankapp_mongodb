@@ -14,10 +14,11 @@ class AccountsTest < ApplicationSystemTestCase
     visit accounts_url
     click_on "New account"
 
-    fill_in "Account no", with: @account.account_no
-    fill_in "Account type", with: @account.account_type
+    fill_in "Accountnum", with: @account.accountnum
+    fill_in "Accounttype", with: @account.accounttype
     fill_in "Balance", with: @account.balance
-    fill_in "Customer", with: @account.customer_id
+    fill_in "Customerid", with: @account.customerid
+    fill_in "Ifsc", with: @account.ifsc
     click_on "Create Account"
 
     assert_text "Account was successfully created"
@@ -28,10 +29,11 @@ class AccountsTest < ApplicationSystemTestCase
     visit account_url(@account)
     click_on "Edit this account", match: :first
 
-    fill_in "Account no", with: @account.account_no
-    fill_in "Account type", with: @account.account_type
+    fill_in "Accountnum", with: @account.accountnum
+    fill_in "Accounttype", with: @account.accounttype
     fill_in "Balance", with: @account.balance
-    fill_in "Customer", with: @account.customer_id
+    fill_in "Customerid", with: @account.customerid
+    fill_in "Ifsc", with: @account.ifsc
     click_on "Update Account"
 
     assert_text "Account was successfully updated"

@@ -14,14 +14,16 @@ class CustomersTest < ApplicationSystemTestCase
     visit customers_url
     click_on "New customer"
 
-    fill_in "Aadhaar number", with: @customer.aadhaar_number
-    fill_in "Bank branch", with: @customer.bank_branch_id
-    fill_in "Email address", with: @customer.email_address
-    fill_in "First name", with: @customer.first_name
-    fill_in "Last name", with: @customer.last_name
-    fill_in "Mobile number", with: @customer.mobile_number
-    fill_in "Pan", with: @customer.pan_id
-    fill_in "Permanent address", with: @customer.permanent_address
+    fill_in "Country", with: @customer.country
+    fill_in "Customerid", with: @customer.customerid
+    fill_in "District", with: @customer.district
+    fill_in "Email", with: @customer.email
+    fill_in "Fname", with: @customer.fname
+    fill_in "Ifsc", with: @customer.ifsc
+    fill_in "Lname", with: @customer.lname
+    fill_in "Mobile", with: @customer.mobile
+    fill_in "Pancard", with: @customer.pancard
+    fill_in "State", with: @customer.state
     click_on "Create Customer"
 
     assert_text "Customer was successfully created"
@@ -32,14 +34,16 @@ class CustomersTest < ApplicationSystemTestCase
     visit customer_url(@customer)
     click_on "Edit this customer", match: :first
 
-    fill_in "Aadhaar number", with: @customer.aadhaar_number
-    fill_in "Bank branch", with: @customer.bank_branch_id
-    fill_in "Email address", with: @customer.email_address
-    fill_in "First name", with: @customer.first_name
-    fill_in "Last name", with: @customer.last_name
-    fill_in "Mobile number", with: @customer.mobile_number
-    fill_in "Pan", with: @customer.pan_id
-    fill_in "Permanent address", with: @customer.permanent_address
+    fill_in "Country", with: @customer.country
+    fill_in "Customerid", with: @customer.customerid
+    fill_in "District", with: @customer.district
+    fill_in "Email", with: @customer.email
+    fill_in "Fname", with: @customer.fname
+    fill_in "Ifsc", with: @customer.ifsc
+    fill_in "Lname", with: @customer.lname
+    fill_in "Mobile", with: @customer.mobile
+    fill_in "Pancard", with: @customer.pancard
+    fill_in "State", with: @customer.state
     click_on "Update Customer"
 
     assert_text "Customer was successfully updated"

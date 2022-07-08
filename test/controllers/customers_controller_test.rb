@@ -17,7 +17,7 @@ class CustomersControllerTest < ActionDispatch::IntegrationTest
 
   test "should create customer" do
     assert_difference("Customer.count") do
-      post customers_url, params: { customer: { aadhaar_number: @customer.aadhaar_number, bank_branch_id: @customer.bank_branch_id, email_address: @customer.email_address, first_name: @customer.first_name, last_name: @customer.last_name, mobile_number: @customer.mobile_number, pan_id: @customer.pan_id, permanent_address: @customer.permanent_address } }
+      post customers_url, params: { customer: { country: @customer.country, customerid: @customer.customerid, district: @customer.district, email: @customer.email, fname: @customer.fname, ifsc: @customer.ifsc, lname: @customer.lname, mobile: @customer.mobile, pancard: @customer.pancard, state: @customer.state } }
     end
 
     assert_redirected_to customer_url(Customer.last)
@@ -34,7 +34,7 @@ class CustomersControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "should update customer" do
-    patch customer_url(@customer), params: { customer: { aadhaar_number: @customer.aadhaar_number, bank_branch_id: @customer.bank_branch_id, email_address: @customer.email_address, first_name: @customer.first_name, last_name: @customer.last_name, mobile_number: @customer.mobile_number, pan_id: @customer.pan_id, permanent_address: @customer.permanent_address } }
+    patch customer_url(@customer), params: { customer: { country: @customer.country, customerid: @customer.customerid, district: @customer.district, email: @customer.email, fname: @customer.fname, ifsc: @customer.ifsc, lname: @customer.lname, mobile: @customer.mobile, pancard: @customer.pancard, state: @customer.state } }
     assert_redirected_to customer_url(@customer)
   end
 
