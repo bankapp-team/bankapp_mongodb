@@ -14,13 +14,6 @@ ActiveRecord::Schema[7.0].define(version: 2022_07_05_065851) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
-  create_table "account", primary_key: "accountnum", id: :integer, default: nil, force: :cascade do |t|
-    t.integer "customerid", null: false
-    t.string "accounttype", limit: 10, null: false
-    t.money "balance", scale: 2, null: false
-    t.string "ifsc", limit: 12, null: false
-  end
-
   create_table "accounts", force: :cascade do |t|
     t.integer "accountnum"
     t.integer "customerid"
@@ -29,15 +22,6 @@ ActiveRecord::Schema[7.0].define(version: 2022_07_05_065851) do
     t.string "ifsc"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-  end
-
-  create_table "bank", primary_key: "ifsc", id: { type: :string, limit: 12 }, force: :cascade do |t|
-    t.string "bankname", limit: 30, null: false
-    t.string "branchname", limit: 30, null: false
-    t.string "district", limit: 30, null: false
-    t.string "state", limit: 30, null: false
-    t.string "address", limit: 50, null: false
-    t.integer "pincode", null: false
   end
 
   create_table "banks", force: :cascade do |t|
@@ -50,18 +34,6 @@ ActiveRecord::Schema[7.0].define(version: 2022_07_05_065851) do
     t.integer "pincode"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-  end
-
-  create_table "customer", primary_key: "customerid", id: :integer, default: nil, force: :cascade do |t|
-    t.string "fname", limit: 30, null: false
-    t.string "ifsc", limit: 12, null: false
-    t.string "lname", limit: 30, null: false
-    t.string "mobile", limit: 10, null: false
-    t.string "pancard", limit: 10, null: false
-    t.string "email", limit: 70, null: false
-    t.string "district", limit: 30, null: false
-    t.string "state", limit: 30, null: false
-    t.string "country", limit: 30, null: false
   end
 
   create_table "customers", force: :cascade do |t|
@@ -79,7 +51,4 @@ ActiveRecord::Schema[7.0].define(version: 2022_07_05_065851) do
     t.datetime "updated_at", null: false
   end
 
-  add_foreign_key "account", "bank", column: "ifsc", primary_key: "ifsc", name: "fk_ifsc"
-  add_foreign_key "account", "customer", column: "customerid", primary_key: "customerid", name: "fk_customerid"
-  add_foreign_key "customer", "bank", column: "ifsc", primary_key: "ifsc", name: "fk_ifsc"
 end
