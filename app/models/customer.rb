@@ -3,4 +3,5 @@ class Customer < ApplicationRecord
     has_many :accounts, dependent: :destroy, class_name: "Account", foreign_key: "customerid"
     has_many :banks, class_name: "Bank", foreign_key: "customerid"
     # belongs_to :bank, class_name: "Bank", foreign_key: "customerid" 
+    # belongs_to :user, class_name: "User", foreign_key: "cid" 
 end

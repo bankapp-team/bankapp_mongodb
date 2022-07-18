@@ -1,0 +1,35 @@
+<%
+=begin%>
+ <p style="color: green"><%= notice %></p>
+
+<h1>Banks</h1>
+
+<div id="banks">
+  <% @banks.each do |bank| %>
+    <%= render bank %>
+    <p>
+      <%= link_to "Show this bank", bank %>
+    </p>
+  <% end %>
+</div> 
+<%
+=end%>
+
+<div class="columns is-centered" id="bank_branches">
+ <% @banks.each do |bank| %>
+ <div class="column mt-6">
+ <p class="bd-notification is-danger">
+   <%= render bank %>
+   <p>
+     <button class="button is-primary"><%= link_to "Action", bank %></button>
+  </p>
+ </div>
+   </p>
+ <% end %>
+</div>
+<%
+=begin%>
+ 
+<%= link_to "New bank", new_bank_path %> 
+<%
+=end%>
